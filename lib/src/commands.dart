@@ -40,6 +40,9 @@ const cKanjiOff = '$fs.'; // Cancel Kanji character mode
 const cAlignLeft = '${esc}a0'; // Left justification
 const cAlignCenter = '${esc}a1'; // Centered
 const cAlignRight = '${esc}a2'; // Right justification
+// const cAlignLeft = '$esc\x30'; // Left justification
+// const cAlignCenter = '$esc\x31'; // Centered
+// const cAlignRight = '$esc\x32'; // Right justification
 const cPos = '$esc\$'; // Set absolute print position [nL] [nH]
 
 // Print

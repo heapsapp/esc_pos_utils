@@ -41,14 +41,14 @@ class CapabilityProfile {
   }
 
   String name;
-  List<CodePage> codePages;
+  List<CodePage>? codePages;
 
-  int getCodePageId(String codePage) {
+  int getCodePageId(String? codePage) {
     if (codePages == null) {
       throw Exception("The CapabilityProfile isn't initialized");
     }
 
-    return codePages
+    return codePages!
         .firstWhere((cp) => cp.name == codePage,
             orElse: () => throw Exception(
                 "Code Page '$codePage' isn't defined for this profile"))
