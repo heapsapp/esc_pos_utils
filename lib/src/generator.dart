@@ -152,7 +152,7 @@ class Generator {
     while (left < widthPx) {
       final Image slice = copyCrop(biggerImage,x: left,y: 0,height: lineHeight, width:heightPx);
       // final Uint8List bytes = slice.getBytes(format: Format.luminance);
-      final Uint8List bytes = slice.getBytes();
+      final Uint8List bytes = slice.getBytes(order: ChannelOrder.grayAlpha);
       blobs.add(bytes);
       left += lineHeight;
     }
@@ -172,7 +172,7 @@ class Generator {
     // R/G/B channels are same -> keep only one channel
     final List<int> oneChannelBytes = [];
     // final List<int> buffer = image.getBytes(format: Format.rgba);
-    final Uint8List buffer = image.getBytes();
+    final Uint8List buffer = image.getBytes(order: ChannelOrder.rgba);
     for (int i = 0; i < buffer.length; i += 4) {
       oneChannelBytes.add(buffer[i]);
     }
