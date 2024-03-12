@@ -17,6 +17,7 @@ const cBeep = '${esc}B'; // Beeper [count] [duration]
 // Mech. Control
 const cCutFull = '${gs}V0'; // Full cut
 const cCutPart = '${gs}V1'; // Partial cut
+const cPresent = '\x1c\x50\x01\x01\x45\x05'; // Present ticket, only for Custom VKP80 III printer
 
 // Character
 const cReverseOn = '${gs}B\x01'; // Turn white/black reverse print mode on
